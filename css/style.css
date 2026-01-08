@@ -1,0 +1,44 @@
+* {
+    transition: all 0.3s linear;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.setp-circle {
+    position: relative;
+}
+.wizard .setp-circle div {
+    width: 30px;
+    height: 30px;
+}
+
+.wizard {
+    width: 750px;
+}
+
+.wizard .setp-circle:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: -webkit-fill-available;
+    top: 14px;
+    left: 30px;
+    background-color: var(--bs-border-color);
+}
+
+.wizard .setp-circle.item-active div {
+    border-width: 2px!important;
+    border-color: #0d6efd!important;
+    color: #0d6efd!important;
+}
+
+.wizard .setp-circle.item-past div {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.wizard .setp-circle.item-past:not(:last-child)::before {
+    background-color: #0d6efd!important;
+}
